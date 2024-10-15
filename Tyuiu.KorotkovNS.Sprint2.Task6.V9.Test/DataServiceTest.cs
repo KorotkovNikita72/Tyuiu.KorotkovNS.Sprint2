@@ -9,7 +9,7 @@ namespace Tyuiu.KorotkovNS.Sprint2.Task6.V9.Test
         {
             DataService ds = new DataService();
 
-            int n = 10;
+            int n = 9;
             int m = 11;
 
             Assert.AreEqual("10.11", ds.FindDateOfNextDay(m, n));

@@ -24,10 +24,10 @@ namespace Tyuiu.KorotkovNS.Sprint2.Task6.V9
 
 
             Console.WriteLine("Введите значение переменной m: ");
-            int m = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите значение переменной n: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            int m = Convert.ToInt32(Console.ReadLine());
 
 
             string res;
