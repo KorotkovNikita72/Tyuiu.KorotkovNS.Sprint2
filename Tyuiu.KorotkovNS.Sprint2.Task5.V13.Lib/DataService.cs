@@ -6,67 +6,66 @@ namespace Tyuiu.KorotkovNS.Sprint2.Task5.V13.Lib
     {
         public string FindDateOfNextDay(int g, int m, int n)
         {
-            string a;
-
-            
-                switch (m)
-                {
-                    case 1:
-                        a = "01";
-                        break;
-                    case 2:
-                        a = "02";
-                        break;
-                    case 3:
-                        a = "03";
-                        break;
-                    case 4:
-                        a = "04";
-                        break;
-                    case 5:
-                        a = "05";
-                        break;
-                    case 6:
-                        a = "06";
-                        break;
-                    case 7:
-                        a = "07";
-                        break;
-                    case 8:
-                        a = "08";
-                        break;
-                    case 9:
-                        a = "09";
-                        break;
-                    case 10:
-                        a = "10";
-                        break;
-                    case 11:
-                        a = "11";
-                        break;
-                    case 12:
-                        a = "12";
-                        break;
-                    default:
-                        throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение {m}");
-
-                }
+            var res = "";
+            var res1 = "";
+            res = n switch
+            {
+                1 => "02",
+                2 => "03",
+                3 => "04",
+                4 => "05",
+                5 => "06",
+                6 => "07",
+                7 => "08",
+                8 => "09",
+                9 => "10",
+                10 => "11",
+                11 => "12",
+                12 => "13",
+                13 => "14",
+                14 => "15",
+                15 => "16",
+                16 => "17",
+                17 => "18",
+                18 => "19",
+                19 => "20",
+                20 => "21",
+                21 => "22",
+                22 => "23",
+                23 => "24",
+                24 => "25",
+                25 => "26",
+                26 => "27",
+                27 => "28",
+                28 => "29",
+                29 => "30",
+                30 => "31",
+                31 => "01"
 
 
+            };
+            res1 = m switch
+            {
+                1 => "01",
+                2 => "02",
+                3 => "03",
+                4 => "04",
+                5 => "05",
+                6 => "06",
+                7 => "07",
+                8 => "08",
+                9 => "09",
+                10 => "10",
+                11 => "11",
+                12 => "12",
+                _ =>
+                    throw new ArgumentException($"Значение m должно юыть от 1 до 12.")
 
-                    if ((n > 0) && (n < 31))
-                    {
-                        n = n + 1;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Число дня задано некорректно. Введите число от 1 до 31");
-                    }
-
-                    return n + "." + a + "." + g;
+            };
+            return res + "." + res1 + "."+g;
 
 
-               
+
         }
     }
 }
